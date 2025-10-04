@@ -2,10 +2,10 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
 import { Smartphone } from "lucide-react";
-import { Twitter, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Twitter, Facebook, Instagram, Linkedin} from "lucide-react";
 
 const socials = [
-  { name: "Twitter", icon: Twitter, href: "#" },
+  { name: "Twitter", icon: Twitter, href: "https://x.com/Mealtyme194?t=fsryWZgpkX4nvtIlzyP1ZA&s=09" },
   { name: "Facebook", icon: Facebook, href: "#" },
   { name: "Instagram", icon: Instagram, href: "#" },
   { name: "LinkedIn", icon: Linkedin, href: "#" },
@@ -17,15 +17,20 @@ const Footer = () => {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Smartphone className="h-6 w-6 text-violet-600" />
+             <img
+  src="/log.jpg" 
+  alt="Description"
+  className="h-7 w-7"
+/>
               <span className="text-xl font-bold text-neutral-600">
-                App<span className="text-violet-600">Nest</span>
+                Meal<span className="text-red-400">Tyme</span>
               </span>
             </div>
             <p className="text-muted-foreground mb-4">
-              The smart app for modern life. Simplify your daily routine with
-              our intuitive app.
-            </p>
+              The smart app for modern life.  </p>
+              <p>Contact us: Mealtips194@gmail.com</p>
+              <p>Phone: +2348109275056</p>
+          
             <div className="flex gap-4">
               {socials.map(({ name, icon: Icon, href }) => (
                 <Link key={name} href={href} aria-label={name}>
@@ -41,8 +46,8 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h3 className="font-medium mb-4">Product</h3>
-            <ul className="space-y-2">
+            {/* <h3 className="font-medium mb-4">Product</h3> */}
+            {/* <ul className="space-y-2">
               {["Features", "Pricing", "Testimonials", "FAQ", "Download"].map(
                 (item) => (
                   <li key={item}>
@@ -55,11 +60,11 @@ const Footer = () => {
                   </li>
                 )
               )}
-            </ul>
+            </ul> */}
           </div>
           <div>
-            <h3 className="font-medium mb-4">Company</h3>
-            <ul className="space-y-2">
+            {/* <h3 className="font-medium mb-4">Company</h3> */}
+            {/* <ul className="space-y-2">
               {["About Us", "Careers", "Press", "Blog", "Contact"].map(
                 (item) => (
                   <li key={item}>
@@ -72,11 +77,11 @@ const Footer = () => {
                   </li>
                 )
               )}
-            </ul>
+            </ul> */}
           </div>
           <div>
-            <h3 className="font-medium mb-4">Legal</h3>
-            <ul className="space-y-2">
+            {/* <h3 className="font-medium mb-4">Legal</h3> */}
+            {/* <ul className="space-y-2">
               {[
                 "Terms of Service",
                 "Privacy Policy",
@@ -93,11 +98,11 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
         </div>
         <div className="mt-12 pt-8 border-t text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} AppNest. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} MealTyme. All rights reserved.</p>
         </div>
       </div>
     </footer>

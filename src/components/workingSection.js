@@ -30,24 +30,24 @@ const WorkingSection = () => {
             >
               Mobile App
             </TabsTrigger>
-            <TabsTrigger
+            {/* <TabsTrigger
               value="desktop"
               className="data-[state=active]:bg-white cursor-pointer"
             >
               Desktop
-            </TabsTrigger>
-            <TabsTrigger
+            </TabsTrigger> */}
+            {/* <TabsTrigger
               value="web"
               className="data-[state=active]:bg-white cursor-pointer"
             >
               Web Version
-            </TabsTrigger>
+            </TabsTrigger> */}
           </TabsList>
           {["mobile", "desktop", "web"].map((platform) => (
             <TabsContent key={platform} value={platform} className="mt-4">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1">
-                  <div className="space-y-8">
+                  <div className="space-y-8"> 
                     {[1, 2, 3].map((step) => (
                       <div key={step} className="flex gap-4">
                         <div className="flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-full bg-violet-100 text-violet-600 font-bold">
@@ -56,10 +56,11 @@ const WorkingSection = () => {
                         <div>
                           <h3 className="text-xl font-bold mb-2">
                             {platform === "mobile"
-                              ? `Mobile Step ${step}`
+                              ? `Step ${step}`
                               : platform === "desktop"
                               ? `Desktop Step ${step}`
-                              : `Web Step ${step}`}
+                              : `Web Step ${step}`
+                              }
                           </h3>
                           <p className="text-muted-foreground">
                             {`Simple description of how to use the ${platform} version of the app. This step explains a key feature.`}

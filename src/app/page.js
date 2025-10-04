@@ -18,16 +18,16 @@ export default function LandingPage() {
       <FeatureSection />
 
       {/* How It Works */}
-      <WorkingSection />
+      {/* <WorkingSection /> */}
 
       {/* Testimonials */}
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
 
       {/* Pricing */}
-      <PricingSection />
+      {/* <PricingSection /> */}
 
       {/* FAQ */}
-      <FaqSection />
+      {/* <FaqSection /> */}
 
       {/* CTA */}
       <CtaSection />

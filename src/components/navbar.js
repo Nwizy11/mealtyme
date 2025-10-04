@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { X } from "lucide-react";
 import { Smartphone } from "lucide-react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,15 +14,20 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="px-10 flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Smartphone className="h-7 w-7 text-violet-600" />
+          {/* <Smartphone className="h-7 w-7 text-violet-600" /> */}
+          <img
+  src="/log.jpg" 
+  alt="Description"
+  className="h-7 w-7"
+/>
           <span className="text-xl font-bold text-neutral-600">
-            App<span className="text-violet-600">Nest</span>
+            Meal<span className="text-red-500">Tyme</span>
           </span>
         </div>
 
         <nav className="hidden md:flex gap-6">
           {/* Your nav links */}
-          {[
+          {/* {[
             { href: "#features", label: "Features" },
             { href: "#how-it-works", label: "How It Works" },
             { href: "#testimonials", label: "Testimonials" },
@@ -35,22 +41,24 @@ const Navbar = () => {
             >
               {item.label}
             </Link>
-          ))}
+          ))} */}
         </nav>
 
         <div className="flex items-center gap-4">
           <Button
             variant="ghost"
             className="hidden md:flex cursor-pointer px-5 py-2 hover:bg-gray-100 text-base"
+            
           >
-            Log in
+            {/* Log in */}
           </Button>
-          <Button
-            size="sm"
-            className="hidden md:flex bg-violet-600 hover:bg-violet-700 text-base py-2 text-white cursor-pointer"
-          >
-            Download
-          </Button>
+         <Button
+  size="sm"
+  className="hidden md:flex bg-gradient-to-r from-[#DC2626] via-[#B91C1C] to-[#991B1B] hover:opacity-90 text-base py-2 text-white cursor-pointer border-0"
+  onClick={() => window.open('https://github.com/Nwizy11/mealtyme/releases/download/v1.0.0/MealTyme.apk', '_blank')}
+>
+  Download
+</Button>
 
           {/* Mobile Menu Toggle Button */}
           <Button
@@ -77,7 +85,7 @@ const Navbar = () => {
         }`}
       >
         <div className="flex flex-col gap-4 p-6">
-          {[
+          {/* {[
             { href: "#features", label: "Features" },
             { href: "#how-it-works", label: "How It Works" },
             { href: "#testimonials", label: "Testimonials" },
@@ -92,18 +100,22 @@ const Navbar = () => {
             >
               {item.label}
             </Link>
-          ))}
+          ))} */}
 
           <div className="flex flex-col gap-2 pt-4">
-            <Button
+            {/* <Button
               variant="ghost"
               className="w-full cursor-pointer bg-gray-100 hover:bg-gray-200 text-base"
             >
               Log in
-            </Button>
-            <Button className="w-full bg-violet-600 hover:bg-violet-700 text-white text-base">
-              Download
-            </Button>
+            </Button> */}
+             <Button
+  size="sm"
+  className="w-full bg-red-500 hover:bg-red-400 text-white text-base"
+  onClick={() => window.open('https://github.com/Nwizy11/mealtyme/releases/download/v1.0.0/MealTyme.apk', '_blank')}
+>
+  Download
+</Button>
           </div>
         </div>
       </div>
